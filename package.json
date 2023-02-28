@@ -1,0 +1,16 @@
+{
+  "name": "logan-benaventes-blog",
+  "version": "1.0.0",
+  "description": "Logan Benavente's personal blog and portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "author": "@piguicorn",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
