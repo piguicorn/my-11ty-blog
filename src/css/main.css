@@ -25,3 +25,39 @@ body {
     white-space: nowrap; 	
     width: 1px;
 }
+
+a.skip-link {
+    display: block;
+    color: var(--dark-blue);
+    background: var(--gradient-light-color);
+    border: 15px double var(--dark-blue);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--roboto-mono);
+}
+
+main {
+    margin-top: 5.43em;
+    padding-inline: 2em;
+    font-family: var(--roboto-condensed);
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+}
+
+h1 > span {
+    background-color: var(--heading-highlight);
+}
+
+hr.bold-separator {
+    width: 50%;
+    border: 5px solid var(--dark-blue);
+    margin-top: var(--regular-margin);
+}
+
+p.subheading {
+    font-size: var(--big-font-size);
+}
