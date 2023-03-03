@@ -1,3 +1,5 @@
+@import "variables.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +7,21 @@
 }
 
 body {
-    background: #4AC29A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    min-height: 100%;
+    background: var(--gradient-light-color);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, var(--gradient-light-color), var(--gradient-dark-color));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, var(--gradient-light-color), var(--gradient-dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+}
+
+/* TODO: set limit width and a background for very big screens */
+
+/* Hide skip link when it's not focused */
+.skip-link:not(:focus) {
+    clip: rect(0 0 0 0); 	
+    clip-path: inset(50%);	
+    height: 1px;	
+    overflow: hidden;	
+    position: absolute;	
+    white-space: nowrap; 	
+    width: 1px;
 }

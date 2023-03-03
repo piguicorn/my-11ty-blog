@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+    /* colors */
+    --white: #FAFAFA;
+    --dark-blue: #0F3443;
+    --gradient-light-color: #BDFFF3;
+    --gradient-dark-color: #4AC29A;
+    /* borders */
+    --thin-border-width: 1px;
+    --thin-border: var(--thin-border-width) solid var(--dark-blue);
+    --wide-border-width: 2px;
+    --wide-border: var(--wide-border-width) solid var(--dark-blue);
+    /* fonts */
+    --roboto-mono: 'Roboto Mono', monospace;
+    --small-font-size: 0.875rem;
+}

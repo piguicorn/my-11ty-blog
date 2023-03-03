@@ -1,0 +1,61 @@
+@import "variables.css";
+
+header {
+    font-family: var(--roboto-mono);
+}
+
+header > a.skip-link {
+    display: block;
+    color: var(--dark-blue);
+    background: var(--gradient-light-color);
+    border: 15px double var(--gradient-dark-color);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+header > nav {
+    background: var(--white);
+    position: relative;
+}
+
+header > nav::after {
+    content: "";
+    width: 100%;
+    height: calc(100% - var(--wide-border-width));
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: var(--wide-border);;
+}
+
+header > nav > a {
+    padding: 22px;
+    display: inline-block;
+    border: var(--wide-border);
+    margin-left: -1px;
+    margin-top: -1px;
+    text-decoration: none;
+    font-size: var(--small-font-size);
+}
+
+header > nav > a:hover,
+header > nav > a:focus-visible {
+    text-decoration: underline 2px;
+    text-decoration-color: var(--gradient-dark-color);
+}
+
+header > nav > a:focus-visible {
+    outline: 10px solid var(--gradient-dark-color);
+}
+
+header > nav > a:not(:first-child) {
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
+
+header > nav > a:first-child {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
