@@ -41,6 +41,7 @@ main {
     margin-top: 5.43em;
     padding-inline: 2em;
     font-family: var(--roboto-condensed);
+    color: var(--dark-blue);
 }
 
 h1 {
@@ -52,12 +53,82 @@ h1 > span {
     background-color: var(--heading-highlight);
 }
 
+h2 {
+    font-weight: 400;
+}
+
 hr.bold-separator {
     width: 50%;
     border: 5px solid var(--dark-blue);
     margin-top: var(--regular-margin);
 }
 
+hr.thin-separator {
+    border: 1px solid var(--dark-blue);
+    margin-top: var(--regular-margin);
+    margin-bottom: var(--large-margin);
+}
+
 p.subheading {
     font-size: var(--big-font-size);
+    margin-top: var(--regular-margin);
+    font-weight: 700;
+}
+
+.projects-list {
+    margin-top: 2.75rem;
+}
+
+.projects-list article {
+    background: var(--white);
+    margin-bottom: var(--regular-margin);
+    border-radius: 22px;
+    border: var(--wide-border);
+    position:relative;
+}
+
+article:focus-within {
+    outline: 15px double var(--dark-blue);
+}
+
+.projects-list article .project-preview {
+    min-height: 200px;
+    background: lightgrey;
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+    border-bottom: var(--wide-border);
+    background: no-repeat center url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F85%2F31%2F49%2F853149a5ab057c1f2a962c9f131506ff.png&f=1&nofb=1&ipt=8ee866e18eabf4cb2a6b3e8eccdf340980a6d4e191fc94a73d369ba4b5604f5d&ipo=images');
+    background-size: cover;
+    filter: grayscale(80%);
+}
+
+.projects-list article:hover .project-preview,
+.projects-list article:focus-within .project-preview {
+    filter: grayscale(0%);
+}
+
+.projects-list article .project-info {
+    padding: 1.375em 1.875em 2.5em 1.375em;
+}
+
+.projects-list article h3 {
+    margin-bottom: var(--short-margin);
+}
+
+.projects-list article a {
+    font-size: var(--slightly-over-regular-font-size);
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.projects-list article:focus-within a,
+.projects-list article:hover a {
+    outline: 0;
+    background: var(--gradient-light-color);
+}
+
+.projects-list article a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 }

@@ -29,14 +29,13 @@ header > nav > a {
     font-size: var(--small-font-size);
 }
 
-header > nav > a:hover,
-header > nav > a:focus-visible {
+header > nav > a:hover {
     text-decoration: underline 2px;
     text-decoration-color: var(--gradient-dark-color);
 }
 
 header > nav > a:focus-visible {
-    outline: 10px solid var(--gradient-dark-color);
+    outline: 15px double var(--dark-blue);
 }
 
 header > nav > a:not(:first-child) {
