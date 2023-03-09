@@ -51,11 +51,44 @@ layout: 'layouts/base.html'
     </div>
 
     <!-- right side -->
-    <section id="writing">
+    <section id="writing" class="writing">
         <h2>Writing</h2>
 
-        <form>
-            <!-- filters -->
+        <form class="posts-filters">
+            <!--
+            <fieldset class="lang">
+                <legend>Languages:</legend>
+                <div class="options">
+                    <div>
+                        <input type="checkbox" id="spanish" name="spanish" value="spanish" />
+                        <label for="spanish"><span lang="es">Español</span> (Spanish)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="english" name="english" value="english" checked/>
+                        <label for="english">English</label>
+                    </div>
+                </div>
+            </fieldset>
+            -->
+            <fieldset class="tag">
+                <legend>Filter by tag:</legend>
+                    <div>
+                        <input type="checkbox" id="css" name="css" value="css">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="javascript" name="javascript" value="javascript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="css1" name="css1" value="css1">
+                        <label for="css1">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="javascript1" name="javascript1" value="javascript">
+                        <label for="javascript1">JavaScript</label>
+                    </div>
+            </fieldset>
         </form>
 
         <ul>

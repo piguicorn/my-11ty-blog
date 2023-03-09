@@ -132,3 +132,49 @@ article:focus-within {
     position: absolute;
     inset: 0;
 }
+
+.writing {
+    margin-top: 48px;
+}
+
+form.posts-filters {
+    margin-top: var(--large-margin);
+    background: var(--white);
+    border: var(--wide-border);
+    padding: 1.375em;
+}
+
+form.posts-filters fieldset {
+    border: none;
+    display: flex;
+}
+
+form.posts-filters fieldset + fieldset {
+    margin-top: 1rem;
+}
+
+form.posts-filters fieldset legend {
+    float: left;
+    font-weight: bold;
+}
+
+form.posts-filters fieldset.lang legend {
+    margin-right: 19px;
+}
+
+form.posts-filters fieldset .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--short-margin);
+}
+
+form.posts-filters fieldset.tag {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (min-width: 600px) {
+    .writing {
+        margin-top: 0;
+    }
+}
