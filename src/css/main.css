@@ -7,28 +7,41 @@
 }
 
 body {
-    background: var(--gradient-light-color);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, var(--gradient-light-color), var(--gradient-dark-color));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, var(--gradient-light-color), var(--gradient-dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: var(--gradient-light-color);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, var(--gradient-light-color), var(--gradient-dark-color));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, var(--gradient-light-color), var(--gradient-dark-color));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 100vh;
+}
+
+input[type="checkbox"]:hover,
+input[type="checkbox"]+label:hover {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4,
+p,
+a {
+    color: var(--dark-blue);
 }
 
 /* TODO: set limit width and a background for very big screens */
 
 /* Hide skip link when it's not focused */
 .skip-link:not(:focus) {
-    clip: rect(0 0 0 0); 	
-    clip-path: inset(50%);	
-    height: 1px;	
-    overflow: hidden;	
-    position: absolute;	
-    white-space: nowrap; 	
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
     width: 1px;
 }
 
 a.skip-link {
     display: block;
-    color: var(--dark-blue);
     background: var(--gradient-light-color);
     border: 15px double var(--dark-blue);
     padding: 20px;
@@ -41,7 +54,6 @@ main {
     margin-top: 5.43em;
     padding-inline: 2em;
     font-family: var(--roboto-condensed);
-    color: var(--dark-blue);
 }
 
 h1 {
@@ -49,7 +61,7 @@ h1 {
     line-height: 2.625rem;
 }
 
-h1 > span {
+h1>span {
     background-color: var(--heading-highlight);
 }
 
@@ -75,6 +87,7 @@ p.subheading {
     font-weight: 700;
 }
 
+/* ------------- Projects ------------- */
 .projects-list {
     margin-top: 2.75rem;
 }
@@ -84,10 +97,11 @@ p.subheading {
     margin-bottom: var(--regular-margin);
     border-radius: 22px;
     border: var(--wide-border);
-    position:relative;
+    position: relative;
+    box-shadow: 4px 4px 4px #BDFFF3;
 }
 
-article:focus-within {
+.projects-list article:focus-within {
     outline: 15px double var(--dark-blue);
 }
 
@@ -99,12 +113,6 @@ article:focus-within {
     border-bottom: var(--wide-border);
     background: no-repeat center url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F85%2F31%2F49%2F853149a5ab057c1f2a962c9f131506ff.png&f=1&nofb=1&ipt=8ee866e18eabf4cb2a6b3e8eccdf340980a6d4e191fc94a73d369ba4b5604f5d&ipo=images');
     background-size: cover;
-    filter: grayscale(80%);
-}
-
-.projects-list article:hover .project-preview,
-.projects-list article:focus-within .project-preview {
-    filter: grayscale(0%);
 }
 
 .projects-list article .project-info {
@@ -117,14 +125,14 @@ article:focus-within {
 
 .projects-list article a {
     font-size: var(--slightly-over-regular-font-size);
-    text-decoration: none;
-    color: var(--dark-blue);
+    /*text-decoration: none;*/
 }
 
 .projects-list article:focus-within a,
 .projects-list article:hover a {
     outline: 0;
     background: var(--gradient-light-color);
+    text-decoration: none;
 }
 
 .projects-list article a::after {
@@ -133,6 +141,7 @@ article:focus-within {
     inset: 0;
 }
 
+/* ------------- Writing ------------- */
 .writing {
     margin-top: 48px;
 }
@@ -142,6 +151,7 @@ form.posts-filters {
     background: var(--white);
     border: var(--wide-border);
     padding: 1.375em;
+    padding-bottom: 0.375rem;
 }
 
 form.posts-filters fieldset {
@@ -149,7 +159,7 @@ form.posts-filters fieldset {
     display: flex;
 }
 
-form.posts-filters fieldset + fieldset {
+form.posts-filters fieldset+fieldset {
     margin-top: 1rem;
 }
 
@@ -168,13 +178,134 @@ form.posts-filters fieldset .options {
     gap: var(--short-margin);
 }
 
-form.posts-filters fieldset.tag {
+form.posts-filters fieldset.tag-filter {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 1rem;
 }
 
-@media (min-width: 600px) {
+form.posts-filters fieldset.tag-filter>div {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3125rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"] {
+    appearance: none;
+    width: var(--slightly-over-regular-font-size);
+    height: var(--slightly-over-regular-font-size);
+    border: var(--thin-border);
+    border-radius: 5px;
+    position: relative;
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    inset: -0.75rem;
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:hover,
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:focus-visible,
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:checked {
+    background-color: var(--gradient-light-color);
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:checked::after {
+    content: "";
+    background: no-repeat center;
+    background-image: url("../images/x.svg");
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--dark-blue);
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:hover+label {
+    text-decoration: var(--text-decoration-underline);
+}
+
+form.posts-filters fieldset.tag-filter input[type="checkbox"]:focus-visible+label {
+    outline: 5px double var(--dark-blue);
+}
+
+.writing .posts-list {
+    margin-top: var(--regular-margin);
+}
+
+.writing .posts-list article {
+    position: relative;
+    border: var(--wide-border);
+    padding: var(--regular-margin) var(--large-margin) var(--large-margin) var(--regular-margin);
+    margin-bottom: var(--regular-margin);
+    background-color: var(--white);
+    box-shadow: 11px 11px 4px #BDFFF3;
+    transition: box-shadow 0.5s;
+}
+
+.writing .posts-list article:hover {
+    box-shadow: none;
+}
+
+.writing .posts-list article:focus-within {
+    outline: 15px double var(--dark-blue);
+}
+
+.writing .posts-list article h3 {
+    margin-bottom: 1rem;
+}
+
+.writing .posts-list article a {
+    font-size: var(--blog-overview-heading);
+}
+
+.writing .posts-list article:focus-within a,
+.writing .posts-list article:hover a {
+    outline: 0;
+    background: var(--gradient-light-color);
+    text-decoration: none;
+}
+
+.writing .posts-list article a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.writing .posts-list article .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--regular-margin);
+    gap: var(--short-margin);
+    list-style: none;
+}
+
+.writing .posts-list article .tags-list li {
+    background-color: var(--dark-blue);
+    color: var(--gradient-light-color);
+    padding: var(--short-margin);
+    font-size: var(--small-font-size);
+    letter-spacing: 0.05rem;
+}
+
+/* ------------- Media Queries ------------- */
+@media (min-width: 900px) {
     .writing {
         margin-top: 0;
+    }
+}
+
+@media not (pointer: coarse) {
+    .projects-list article .project-preview {
+        filter: grayscale(80%);
+    }
+
+    .projects-list article:hover .project-preview,
+    .projects-list article:focus-within .project-preview {
+        filter: grayscale(0%);
     }
 }

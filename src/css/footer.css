@@ -1,0 +1,15 @@
+footer {
+    background: linear-gradient(180deg, rgba(15, 52, 67, 0) 0%, #0F3443 13.02%);
+    border: 2px solid #0F3443;
+    margin-top: var(--large-margin);
+    padding: var(--large-margin);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: var(--gradient-light-color);
+}

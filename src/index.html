@@ -20,9 +20,9 @@ layout: 'layouts/base.html'
 
         <hr class="thin-separator">
 
-        <section id="projects">
+        <section id="projects" aria-labelledby="h-projects">
             <!-- Projects -->
-            <h2>Projects</h2>
+            <h2 id="h-projects">Projects</h2>
 
             <div class="projects-list">
                 <article>
@@ -51,8 +51,8 @@ layout: 'layouts/base.html'
     </div>
 
     <!-- right side -->
-    <section id="writing" class="writing">
-        <h2>Writing</h2>
+    <section id="writing" class="writing" aria-labelledby="h-writing">
+        <h2 id="h-writing">Writing</h2>
 
         <form class="posts-filters">
             <!--
@@ -70,52 +70,55 @@ layout: 'layouts/base.html'
                 </div>
             </fieldset>
             -->
-            <fieldset class="tag">
+            <fieldset class="tag-filter">
                 <legend>Filter by tag:</legend>
                     <div>
-                        <input type="checkbox" id="css" name="css" value="css">
+                        <input type="checkbox" id="css" name="filters[]" value="css">
                         <label for="css">CSS</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="javascript" name="javascript" value="javascript">
+                        <input type="checkbox" id="javascript" name="filters[]" value="javascript">
                         <label for="javascript">JavaScript</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="css1" name="css1" value="css1">
+                        <input type="checkbox" id="css1" name="filters[]" value="css1">
                         <label for="css1">CSS</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="javascript1" name="javascript1" value="javascript">
+                        <input type="checkbox" id="javascript1" name="filters[]" value="javascript">
                         <label for="javascript1">JavaScript</label>
                     </div>
             </fieldset>
         </form>
 
-        <ul>
-            <li>
-                <h3>Title of blog post</h3>
+        <div class="posts-list">
+            <article>
+                <h3><a href="#">Title of blog post</a></h3>
                 <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
-            </li>
+                <ul class="tags-list">
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Inclusive Design</li>
+                    <li>Accessibility</li>
+                </ul>
+            </article>
+            <article>
+                <h3><a href="#">Title of blog post</a></h3>
+                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
+            </article>
+            <article>
+                <h3><a href="#">Title of blog post</a></h3>
+                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
+            </article>
+            <article>
+                <h3><a href="#">Title of blog post</a></h3>
+                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
+            </article>
+            <article>
+                <h3><a href="#">Title of blog post</a></h3>
+                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
+            </article>
+        </div>
 
-            <li>
-                <h3>Title of blog post</h3>
-                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
-            </li>
-
-            <li>
-                <h3>Title of blog post</h3>
-                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
-            </li>
-
-            <li>
-                <h3>Title of blog post</h3>
-                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
-            </li>
-
-            <li>
-                <h3>Title of blog post</h3>
-                <p>Alias libero necessitatibus cupiditate laboriosam repudiandae quo maiores. Est pariatur aut est officiis delectus. Dolor corrupti voluptas omnis eligendi aut consequatur laudantium. Nihil rerum est totam doloremque dicta.</p>
-            </li>
-        </ul>
     </section>
 </main>
