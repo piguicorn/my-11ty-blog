@@ -16,10 +16,10 @@
     /* fonts */
     --roboto-mono: 'Roboto Mono', monospace;
     --roboto-condensed: 'Roboto Condensed', sans-serif;
-    --big-font-size: 1.75rem;
-    --slightly-over-regular-font-size: 1.25rem; /* 20px */
+    --bigger-than-big-font-size: 1.75rem;
+    --big-font-size: 1.5rem;/* 24px */
+    --medium-font-size: 1.25rem; /* 20px */
     --small-font-size: 0.875rem;
-    --blog-overview-heading: 1.5rem;/* 24px */
     --text-decoration-underline: underline 3px var(--gradient-dark-color);
     /* margins */
     --short-margin: 0.6875rem;

@@ -21,13 +21,14 @@ input[type="checkbox"]+label:hover {
     cursor: pointer;
 }
 
-h1, h2, h3, h4,
+h1,
+h2,
+h3,
+h4,
 p,
 a {
     color: var(--dark-blue);
 }
-
-/* TODO: set limit width and a background for very big screens */
 
 /* Hide skip link when it's not focused */
 .skip-link:not(:focus) {
@@ -81,10 +82,78 @@ hr.thin-separator {
     margin-bottom: var(--large-margin);
 }
 
-p.subheading {
-    font-size: var(--big-font-size);
-    margin-top: var(--regular-margin);
+ul.subheading,
+ul.languages-list {
+    padding-left: 22px;
+}
+
+p.subheading,
+.subheading p {
+    font-size: var(--bigger-than-big-font-size);
     font-weight: 700;
+}
+
+p.subheading,
+ul.subheading {
+    margin-top: var(--regular-margin);
+}
+
+ul.subheading li+li {
+    margin-top: var(--short-margin);
+}
+
+/* ------------- General ------------- */
+.right-main {
+    margin-top: 48px;
+}
+
+.writing .posts-list article,
+.experiences-list article {
+    position: relative;
+    border: var(--wide-border);
+    padding: var(--regular-margin) var(--large-margin) var(--large-margin) var(--regular-margin);
+    margin-bottom: var(--regular-margin);
+    background-color: var(--white);
+    box-shadow: 11px 11px 4px #BDFFF3;
+    transition: box-shadow 0.5s;
+}
+
+.writing .posts-list article h3,
+.experiences-list article h3 {
+    margin-bottom: 1rem;
+}
+
+.writing .posts-list article a,
+.experiences-list article h3 {
+    font-size: var(--big-font-size);
+}
+
+.experiences-list article p {
+    margin-top: 1rem;
+}
+
+/* TODO: Links */
+
+.skills-list {
+    margin-top: var(--regular-margin);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--short-margin);
+}
+
+.skills-list li {
+    background-color: var(--white);
+    border: var(--wide-border);
+    border-radius: 22px;
+    padding: var(--short-margin);
+    padding-inline: var(--regular-margin);
+    font-weight: 500;
+}
+
+.skills-list li p {
+    font-weight: 500;
+    font-size: var(--medium-font-size);
 }
 
 /* ------------- Projects ------------- */
@@ -124,7 +193,7 @@ p.subheading {
 }
 
 .projects-list article a {
-    font-size: var(--slightly-over-regular-font-size);
+    font-size: var(--medium-font-size);
     /*text-decoration: none;*/
 }
 
@@ -142,10 +211,6 @@ p.subheading {
 }
 
 /* ------------- Writing ------------- */
-.writing {
-    margin-top: 48px;
-}
-
 form.posts-filters {
     margin-top: var(--large-margin);
     background: var(--white);
@@ -193,8 +258,8 @@ form.posts-filters fieldset.tag-filter>div {
 
 form.posts-filters fieldset.tag-filter input[type="checkbox"] {
     appearance: none;
-    width: var(--slightly-over-regular-font-size);
-    height: var(--slightly-over-regular-font-size);
+    width: var(--medium-font-size);
+    height: var(--medium-font-size);
     border: var(--thin-border);
     border-radius: 5px;
     position: relative;
@@ -237,30 +302,12 @@ form.posts-filters fieldset.tag-filter input[type="checkbox"]:focus-visible+labe
     margin-top: var(--regular-margin);
 }
 
-.writing .posts-list article {
-    position: relative;
-    border: var(--wide-border);
-    padding: var(--regular-margin) var(--large-margin) var(--large-margin) var(--regular-margin);
-    margin-bottom: var(--regular-margin);
-    background-color: var(--white);
-    box-shadow: 11px 11px 4px #BDFFF3;
-    transition: box-shadow 0.5s;
-}
-
 .writing .posts-list article:hover {
     box-shadow: none;
 }
 
 .writing .posts-list article:focus-within {
     outline: 15px double var(--dark-blue);
-}
-
-.writing .posts-list article h3 {
-    margin-bottom: 1rem;
-}
-
-.writing .posts-list article a {
-    font-size: var(--blog-overview-heading);
 }
 
 .writing .posts-list article:focus-within a,
@@ -292,9 +339,40 @@ form.posts-filters fieldset.tag-filter input[type="checkbox"]:focus-visible+labe
     letter-spacing: 0.05rem;
 }
 
+/* ------------- Skills ------------- */
+.skills+hr.thin-separator {
+    margin-top: var(--large-margin);
+}
+
+/* ------------- Languages ------------- */
+.languages-list {
+    margin-top: var(--regular-margin);
+}
+
+/* ------------- Professional Experience ------------- */
+.experiences-list {
+    margin-top: var(--large-margin);
+    position: relative;
+}
+
+.experiences-list::before {
+    content: "";
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: var(--dark-blue);
+    transform: translateX(-50%);
+}
+
+.experiences-list article + article {
+    margin-top: 40px;
+}
+
 /* ------------- Media Queries ------------- */
 @media (min-width: 900px) {
-    .writing {
+    .right-main {
         margin-top: 0;
     }
 }
